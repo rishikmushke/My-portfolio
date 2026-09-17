@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<body style="color:white;">
+  <h7 style="color:black;"><b><i><button onclick="home()">HOME</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button onclick="aboutme()">ABOUT ME</button>&nbsp;<button onclick="skills()">SKILLS</button>&nbsp;<button onclick="education()">EDUCATION</button>&nbsp;<button onclick="projects()">PROJECTS</button>&nbsp;<button onclick="resume()">RESUME</button><button onclick="contact()">contact</button></i></b></h7>
+
+  <div id="home" style="color:black;">
+    <img src="photo.jpg" width="200" height="250">
+  <h2 style="color:black;">
+  <b>
+    <i>
+      ---PERSONAL INFORMATION---<br><br>
+      NAME:&nbsp;M.Rishik<br><br>
+      CAREER GOAL:&nbsp;My goal is to become a software developer and build innovative solutions<br><br>
+      SHORT INTRODUCTION:<h4>I am M.Rishik, currently pursuing my B.Tech in EVL (VLSI) at Guru Nanak Institutions Technical Campus. I am interested in programming and web development, and I enjoy learning new technologies. I have worked on projects using C, Python, and HTML. My goal is to become a software developer and build innovative solutions.</h4><br>
+    </i>
+      </b>
+    </h2>
+  </div>
+  <div id="aboutme" style="display:none; color:black;">
+    <h2>
+      ---ABOUT ME---<br><br></>
+      EDUCATION:&nbsp;B.TECH<br><br>
+      COLLEGE:&nbsp;GURU NANAK INSTITUTIONS TECHNICAL CAMPUS<br><br>
+      BRANCH:&nbsp;EVL(VLSI)<br><br>
+      INTREST:&nbsp;Programming,Webdevelopment,Listening music<br><br>
+      CAREER OBJECTIVE:To work in a reputed company where I can develop my skills, gain experience, and contribute to the growth of the organization<br><br>
+    </h2>
+  </div>
+  <div id="skills" style="display:none; color:black;">
+    <h2>
+      ---SKILLS---<br>
+      c<br><br>
+      PYTHON<br><br>
+      HTML
+    </h2>
+  </div>
+  <div id="education" style="display:none; color:black;"> 
+    <h2>
+      ---EDUCATION---<br><br>
+      B.TECH<br>
+      <h3>GURU NANAK INSTITUTIONS TECHNICAL CAMPUS<br><br></h3>
+      CGPA<br>
+      <h3>8.41<br><br></h3>
+      INTERMEDIATE<br>
+    <h3>Sri chaitanya jr college</h3>
+    PERCENGAGE<br>
+    <h3>76.4<br><br></></h3>
+    </h2>
+  </div>
+<div id="projects" style="display:none; color:black;">
+  <h2>
+    ---PROJECTS---<br><br>
+    student managemet system(C)<br>College Results & Student Management System – C
+    <h4>
+A console-based management system developed in C that provides separate login access for faculty and students. The system manages student details, internal marks, semester results, SGPA/CGPA calculation, pass/fail status, library information, placement details, and college notifications.
+    </h4>
+    <a href="https://github.com/rishikmushke/College-Results-Management-System/releases/tag/v1.0.0">GITHUB</a><br><br>
+    <h2>ONLINE SHOPING WEBSITE(C)</h2>
+    <h3>A C-based online shopping project that allows users to view products, select an item, enter quantity, calculate the total price, and provide a delivery address. The project demonstrates the practical implementation of Array of Structures in C.</h3>
+    <a href="https://github.com/rishikmushke/Online-Shoping-Website">GITHUB</a>
+  </h2>
+</div>
+<div id="resume" style="display:none;">
+  <h1 style="color:black;">RESUME</h1>
+  <a href="resume.pdf">resume</a>
+</div>
+<div id="contact" style="display: none; color:black;">
+  <h2>
+    ---CONTACT DETAILS---<br><br>
+    Email Id<br>
+    <a href="mailto:mrishik777@gmail.com">email<br><br></a>
+    phone number<br>
+    <h3>9492302077</h3>
+    LINKEDIN<br>
+    <a href="https://www.linkedin.com/in/mushke-rishik-521206383?utm_source=share_via&utm_content=profile&utm_medium=member_android">mushkerishik</a>
+  </h2>
+  <h2>GITHUB</h2><br>
+  <a href="https://github.com/rishikmushke">mushkerishik</a>
+</div>
+  <script>
+  function aboutme()
+  {
+    document.getElementById("aboutme").style.display="block";
+    document.getElementById("home").style.display="none";
+    document.getElementById("skills").style.display="none";
+    document.getElementById("education").style.display="none";
+    document.getElementById("projects").style.display="none";
+    document.getElementById("resume").style.display="none";
+    document.getElementById("contact").style.display="none";
+  }
+  </script>
+  <script>
+  function home()
+  {
+    document.getElementById("home").style.display="block";
+    document.getElementById("aboutme").style.display="none";
+    document.getElementById("skills").style.display="none";
+    document.getElementById("education").style.display="none";
+    document.getElementById("projects").style.display="none";
+    document.getElementById("resume").style.display="none";
+    document.getElementById("contact").style.display="none";
+  }
+  </script>
+  <script>
+  function skills()
+  {
+    document.getElementById("home").style.display="none";
+    document.getElementById("aboutme").style.display="none";
+    document.getElementById("skills").style.display="block";
+    document.getElementById("education").style.display="none";
+    document.getElementById("projects").style.display="none";
+    document.getElementById("resume").style.display="none";
+    document.getElementById("contact").style.display="none";
+  }
+  </script>
+<script>
+ function education()
+{
+  document.getElementById("education").style.display="block";
+  document.getElementById("home").style.display="none";
+    document.getElementById("aboutme").style.display="none";
+    document.getElementById("skills").style.display="none";
+  document.getElementById("projects").style.display="none";
+  document.getElementById("resume").style.display="none";
+  document.getElementById("contact").style.display="none";
+}
+</script>
+<script>
+function projects()
+{
+  document.getElementById("education").style.display="none";
+  document.getElementById("home").style.display="none";
+    document.getElementById("aboutme").style.display="none";
+    document.getElementById("skills").style.display="none";
+  document.getElementById("projects").style.display="block";
+  document.getElementById("resume").style.display="none";
+  document.getElementById("contact").style.display="none";
+}
+</script>
+<script>
+function resume()
+{
+document.getElementById("education").style.display="none";
+  document.getElementById("home").style.display="none";
+    document.getElementById("aboutme").style.display="none";
+    document.getElementById("skills").style.display="none";
+  document.getElementById("projects").style.display="none";
+ document.getElementById("resume").style.display="block";
+  document.getElementById("contact").style.display="none";
+}
+</script>
+<script>
+function contact()
+{
+  document.getElementById("education").style.display="none";
+  document.getElementById("home").style.display="none";
+    document.getElementById("aboutme").style.display="none";
+    document.getElementById("skills").style.display="none";
+  document.getElementById("projects").style.display="none";
+ document.getElementById("resume").style.display="none";
+  document.getElementById("contact").style.display="block";
+}
+</script>
+</body>
+</html>

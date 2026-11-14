@@ -4,57 +4,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
     body{
-        background-color:#264B56;
+        background-color:#FFFFFF;
     }
     h1{
-        color:#B4AA86;
-        text-decoration:underline;
+        color:#74C365;
+        font-weight:strong;
     }
     button
     {
-        background-color:rgb(red,peple,violet);
-        text-size:100px;
+        background-color:#74C365;
+        text-size:200px;
         font-weight:bold;
         border:0px;
-        padding:0px 20px;
+        padding:20px 20px;
         border-radius:200px;
     }
     dl
     {
-        color:white;
+        color:black;
         text-font:verdana;
         text-weight:italic;
         text-height:30px;
     }
     ol
     {
-        color:orange;
+        color:black;
         text-weight:bold;
     }
     a
     {
-        color:white;
+        color:black;
+        text-size:20px;
     }
     dt
     {
-        color:white;
+        color:black;
         font-size:25px;
         font-weight:strong;
     }
     dd
     {
-        color:orange;
+        color:black;
+        font-size:25px;
+        font-weight:strong;
     }
     a
     {
         align:"center"
     }
-   div.educations,div.college,div.branch,div.intrest,div.careerobjective
+   div.educations,div.college,div.branch,div.intrest,div.careerobjective,c,java,python,html
     {
        border:300px;
         padding:30px 30px;
-        background-color:black;
-        border-radius:30px;
+        background-color:white;
+        border-radius:300px;
+       
     }
     * {
     box-sizing: border-box;
@@ -78,178 +82,204 @@ body
         font-size: 18px;
     }
 }<div width=30px height=40px>
+    /* Responsive Design */
+
+@media (max-width: 600px) {
+    body {
+        width: 100%;
+        margin: 0;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    h1 {
+        font-size: 208px;
+    }
+
+    p {
+        font-size: 2000px;
+    }
+    home{
+        padding:20px;
+        border-radius:30px;
+    }
+    
+}
     </style>
     <head>
-        <div width=20px height=20px>
-            <button onclick="home()">HOME
-            <button onclick="aboutme()">ABOUT ME
-            <button onclick="skills()">SKILLS
-            <button onclick="education()">EDUCATION
-            <button onclick="projects()">PROJECTS
-            <button onclick="resume()">RESUME
-            <button onclick="contact()">contact
-            </button>
+        <h1 style="color:#800000" align="left">Mushke Rishik</h1>
+        <div id="intro" class="intro" >
+            <img src="you1.jpg" align="right" width="160px" height="200px">
+            <h3 style="color:black">Hello I'M Rishik</h3>
+            <h1 style="color:black;">I'M A ASPIRING<br>SOFTWARE DEVELOPER</h1>
+            <button onclick="showBlock('projects')">VIEW MY PROJECTS</button>&nbsp;<button onclick="showBlock('resume')">RESUME</button><br><br>
+            <button onclick="showBlock('contact')">GET IN TOUCH</button>
+            
         </div>
-         <div id="home" style="color: black;">
+         <div id="home" style="color: black;" width=297px height=210px>
         <h1 align="middle">PERSONAL DEATILS</h1><br>
         <div class="photo" align="center">
-        <img src="photo.jpg" align="middle" width=300px height=300px>
+        <img src="photo1.jpg" align="middle" width=300px height=300px>
         </div>
         <dl>
-            <dt>NAME:</dt>
-            <dd>M.RISHIK</dd><br>
-            <dt>CAREER GOAL:</dt>
-            <dd>Get a good software development job</dd><br>
-            <dt>SHORT INTRODUCTION:</dt>
-            <dd>Hello everyone, my name is Rishik. I am pursuing B.Tech in VLSI Engineering at Guru Nanak Institutions Technical Campus. I am interested in programming and software development. I know C and HTML, and I am currently learning CSS and Java. My goal is to become a skilled software developer. Thank you.</dd>
+            <h2 style="color:#800000">NAME:</h2><h1 style="color:black">M.Rishik</h1>
+            <br>
+            <h2 style="color:#800000">CAREER GOAL:</h2>
+            <h3 style="color:">To become a skilled Software Developer by continuously improving my programming skills, building real-world projects, and learning new technologies. I aim to contribute to innovative software solutions and grow as a professional in the IT industry</h3><br>
+            <h2 style="color:#800000">SHORT INTRODUCTION:</h2>
+            <h3 style="color:black">Hello! I'm Rishik, a B.Tech student specializing in VLSI Design and Technology at Guru Nanak Institutions Technical Campus. I am passionate about programming and software development. I have knowledge of C, Python, Java, HTML and CSS, and I enjoy building projects and learning new technologies</h3>
         </dl>
         </div>
-         <div id="aboutme" class="aboutme" style="display:none;">
+         <div id="aboutme" class="aboutme">
              <h1 align="center">ABOUT ME</h1>     
              <br>
              <dl>
-                 <div class="educations" width=30px height=40px>
+                 <div id="education" width=30px height=40px>
                  <img src="btech.jpg" align="right" border=white; width=100px height=70px>
-                 <dt>EDUCATION:</dt>
-                 <dd>B.TECH</dd>
-                 </div><br>
+                 <h2 style="color:black">EDUCATION:</h2>
+                 <h3 style="color:#800000">B.TECH</h3>
+                 </div>
                  <div class="college" width=30px height=40px>
                      <img src="college.jpg" align="right" border=white; width=100px height=80px>
-                     <dt>COLLEGE:</dt>
-                     <dd>GURU NANAK INSTITUTIONS TECHNICAL CAMPUS</dd>
-                     <a href="https://www.gniindia.org/gnitc/welcome.php">gnitc.com</a>
+                     <h2 style="color:black" align="left">COLLEGE:</h2>
+                     <h3 style="color:#800000">GURU NANAK INSTITUTIONS TECHNICAL CAMPUS</h3>
+                     <a href="https://www.gniindia.org/gnitc/welcome.php" style="color:green">gnitc.com</a>
                  </div><br>
                  <div class="branch" width=30px height=40px>
                      <img src="vlsi.jpg" align="right"  border=white; width=100px height=80px>
-                     <dt>BRANCH:</dt>
-                     <dd>ELECTRONICS ENGINEERING(VLSI DESIGN AND TECNOLOGY)</dd>
+                     <h2 style="color:black">BRANCH:</h2>
+                     <h3 style="color:#800000">ELECTRONICS ENGINEERING(VLSI DESIGN AND TECNOLOGY)</h3>
                  </div><br>
                  <div class="intrest" width=30px height=40px>
                      <img src="coding.jpg" align="right" border=white; width=100px height=80px>
-                     <dt>INTRESTS:</dt>
-                     <dd>Code debuging,watching movies,reading tech news</dd>
+                     <h2 style="color:black">INTRESTS:</h2>
+                     <h3 style="color:#800000">Full-Stack Development, python Backend Development, Artificial Intelligence, Problem Solving, Learning New Technologies, Software Development, Open-Source Projects.</h3>
                  </div><br>
                  <div class="careerobjective" width=50px height=80px>
                      <img src="career.jpg" align="right" border=white; width=100px height=70px>
-                     <dt>CAREER OBJECTIVE:</dt>
-                     <dd>WORK AS SOFTWARE DEVLOPER</dd>
+                     <h2 style="color:black">CAREER OBJECTIVE:</h2>
+                     <h3 style="color:#800000">WORK AS SOFTWARE DEVLOPER</h3>
                  </div><br>
              </dl>
          </div>
-                <div id="skills" class="skills" width=30px height=30px style="display:none;">
-                    <h1 align="middle">SKILLS</h1>
-                    <ol>
-                        <li>C</li><br>
-                        <li>PYTHON</li><br>
-                        <li>JAVA</li><br>
-                        <li>HTML,CSS</li><br>
-                    </ol>
+                <div id="skills" class="skills" width=210px heightpx>
+                    <h1 align="middle">SKILLS</h1><br><br>
+                    <div  id="c" class="c" width=30px height=40px>
+                     <img src="c.jpg" align="right" border=white; width=100px height=80px>
+                        <h1 style="color:black">C</h1>
                 </div>
-                <div id="education" class="education" width=30px height=30px style="display:none;"> 
+                    <br>
+                    <div  id="python" class="python" width=30px height=40px>
+                     <img src="python.jpg" align="right" border=white; width=100px height=80px>
+                        <h1 style="color:#800000">PYTHON</h1>
+                </div>
+                    <br>
+                    <div  id="java" class="java" width=30px height=40px>
+                     <img src="java.jpg" align="right" border=white; width=100px height=80px>
+                        <h1 style="color:black">JAVA</h1>
+                </div>
+                    <br>
+                    <div id="html" class="html" width=30px height=40px>
+                     <img src="html.jpg" align="right" border=white; width=100px height=80px>
+                        <h1 style="color:#800000">HTML & CSS</h1>
+                </div>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                <div id="education-deatails" class="education" width=30px height=30px> 
                     <h1 align="center">EDUCATION</h1>
-                    <dl>
-                        <dt>B.Tech:</dt>
-                        <dd>CGPA:</dd>
-                        <dd>8.41</dd><br>
-                        <dt>INTERMEDIATE</dt>   
-                        <dd>PERCENTAGE:</dd>
-                        <dd>76.4</dd>                        
-                    </dl>
-                </div>
-                <div id="projects" style="display:none;">
-                    <h1 align="center">PROJECTS</h1><br>
-                    <dl>
-                        <dt>College Results Management System-(C):</dt><br>
-                        <dd>A C-based College Results Management System that stores and manages student details, marks, SGPA, and academic results. It provides a simple way to add, view, and manage student academic information</dd><br>
-                        <a href="https://github.com/rishikmushke/College-Results-Management-System">GITHUB</a><br><br>
-                        <dt>Online Shopping Website-(C)</dt><br>
-                        <dd>A C-based online shopping project that allows users to view products, select an item, enter quantity, calculate the total price, and provide a delivery address. The project demonstrates the practical implementation of Array of Structures in C</dd><br>
-                        <a href="https://github.com/rishikmushke/Online-Shoping-Website">GITHUB</a><br><br>
-                        <dt>MY PORTFOLIO</dt><br>
-                        <dd>A personal portfolio website created using HTML and CSS to showcase my skills, projects, career goals, and self-introduction in a simple and professional way</dd><br>
-                        <a href="https://rishikmushke.github.io/My-portfolio/">GITHUB</a>
-                    </dl>
-                </div>
-                <div id="resume" style="display:none;">
-                    <h1 align="center">RESUME</h1><br>
-                    <a href="resume.pdf">VIEW/DOWNLOAD</a>
-                </div>
-                <div id="contact" style="display:none;">
-                    <h1 align="center">CONTACT</h1>   
-                    <dl>
-                        <dt>GMAIL:</dt><br>
-                        <dd><a href="mailto:mrishik777@123">mrishik777@gmail.com</a></dd><br
-                            <dt>PHONE NUMBER:</dt><br>
-                            <dd>9492302077</dd><br>
-                            <dt>GITHUB</dt><br>
-                            <dd><a href="https://github.com/rishikmushke">mushkerishik</a></dd>
-                            <dt>LINKEDIN</dt><br>
-                            <dd><a href="https://www.linkedin.com/in/mushke-rishik-521206383?utm_source=share_via&utm_content=profile&utm_medium=member_android">LINKEDIN</a></dd>
-                        </dl>
-                </div>
-                    <script>
-                    function hideall()
-                    {
-                        document.getElementById("home").style.display="none";
-                        document.getElementById("aboutme").style.display="none";
-                        document.getElementById("skills").style.display="none";
-                        document.getElementById("education").style.display="none";
-                        document.getElementById("projects").style.display="none";
-                        document.getElementById("resume").style.display="none";
-                        document.getElementById("contact").style.display="none";
-                    }
-                    </script>
-                    <script>
-                    function home()
-                    {
-                        hideall();
-                        document.getElementById("home").style.display="block";
-                    }
-                    </script>
-                    <script>
-                    function aboutme()
-                    {
-                       hideall();
-                       document.getElementById("aboutme").style.display="block";                        
-                    }
-                    </script>
-                    <script>
-                    function skills()
-                    {
-                        hideall();
-                        document.getElementById("skills").style.display="block";
-                    }
-                    </script>
-                    <script>
-                    function education()
-                    {
-                      hideall();
-                        document.getElementById("education").style.display="block";
-                    }
-                    </script>
-                    <script>
-                    function projects()
-                    {
-                        hideall();
-                        document.getElementById("projects").style.display="block";
-                    }
-                    </script>
-                    <script>
-                    function resume()
-                    {
-                    hideall();
-                    document.getElementById("resume").style.display="block";
-                    }
-                    </script>
-                    <script>
-                    function contact()
-                    {
-                        hideall();
-                        document.getElementById("contact").style.display="block";
-                    }
-                    </script>
                     
+                        <h1 style="color:black">B.Tech:</h1>
+                        <h2 style="color:#800000">CGPA:</h2>
+                        <h1 style="color:green">8.41</h1><br>
+                        <h1 style="color:black">INTERMEDIATE</h1>   
+                        <h3 style="color:#800000">PERCENTAGE:</h3>
+                        <h1 style="color:green">76.4</h1>                        
+                    
+                </div>
+                    <br>
+                    <br>
+                <div id="projects" class="projects">
+                    <h1 align="center">PROJECTS</h1>
+                        <h3>South Central Railway Ticket Management System-(Python, OOP, NumPy):</h3><br>
+                        <h4 style="color:#800000">console application that manages basic railway operations. Agents log in with a username and password, browse train and station details, and search trains by source and destination. It is built with object-oriented programming and currently covers the Kacheguda to Kamareddy route, including intermediate stations and departure timings.</h4>
+                        <a href="https://github.com/rishikmushke/south-central-railway-ticket-system" style="color:green">LINk</a><br><br>
+                        <h3>College Results Management System-(C):</h3>
+                        <h4 style="color:#800000">A C-based College Results Management System that stores and manages student details, marks, SGPA, and academic results. It provides a simple way to add, view, and manage student academic information</h4>
+                        <a href="https://github.com/rishikmushke/College-Results-Management-System" font-height=200px style="color:green">LINK</a><br><br>
+                        <h3 style="color:black">Online Shopping Website-(C):</h3>
+                        <h4 style="color:#800000">A C-based online shopping project that allows users to view products, select an item, enter quantity, calculate the total price, and provide a delivery address. The project demonstrates the practical implementation of Array of Structures in C</h3>
+                        <a href="https://github.com/rishikmushke/Online-Shoping-Website" style="color:green">LINK</a><br><br>
+                        <h3>MY PORTFOLIO-(HTML and CSS):</h3>
+                        <h4 style="color:#800000">A personal portfolio website created using HTML and CSS to showcase my skills, projects, career goals, and self-introduction in a simple and professional way</h4>
+                        <a href="https://rishikmushke.github.io/My-portfolio/" style="color:green">LINK</a>
+                    
+                </div>
+                <div id="resume">
+                    <h1 align="center">RESUME</h1><br>
+                    <img src="resume.jpg" width=210px height=297px align="middle" ><br><br>
+                    <a href="mushke_rishik_resume.pdf" style="color:green">VIEW/DOWNLOAD</a><br><br>
+                    <button onclick="showBlock('contact')">HIRE ME</button>
+                </div>
+                    <br>
+                    <br>
+                    <br>
+                <div id="contact">
+                    <h1 align="center">CONTACT</h1>   
+                    
+                        <h3>GMAIL:</h3>
+                    <h3>  <a href="mailto:mrishik777@123" style="color:#800000">mrishik777@gmail.com</a></h3>
+                            <h3>PHONE NUMBER:</h3>
+                            <h3 style="color:#800000">9492302077</h3><br>
+                            <h3>GITHUB:</h3>
+                            <h3><a href="https://github.com/rishikmushke" style="color:#800000">mushkerishik</a></h3>
+                            <h3>LINKEDIN:</h3>
+                            <h3><a href="https://www.linkedin.com/in/mushke-rishik-521206383?utm_source=share_via&utm_content=profile&utm_medium=member_android" style="color:#800000">LINKEDIN</a></h3><br>
+                       
+                </div>
+                    <footer align="center" width=25px height=30px >
+    <p font-weight=20px>
+        © 2026 Mushke Rishik. All Rights Reserved.
+    </p>
+</footer>
     </head>
-            </div>
+ </div>
+    <script>
+       
+function showBlock(id)
+{
+    let sections = [
+        "projects",
+        "resume",
+        "contact",
+    
+    ];
+
+    sections.forEach(function(section)
+    {
+        document.getElementById(section).style.display = "block";
+    });
+
+    document.getElementById(id).style.display = "block";
+
+    document.getElementById(id).scrollIntoView({
+        behavior: "smooth"
+    });
+}
+</script>
 </body>
-            </html>
+</html>

@@ -820,4 +820,56 @@ footer {
                 </div>
                 <div id="resume">
                     <h1 align="center">RESUME</h1><br>
+                    <img src="resume.jpg" width=210px height=297px align="middle" ><br><br>
+                    <a href="mushke_rishik_resume.pdf" style="color:green">VIEW/DOWNLOAD</a><br><br>
+                    <button onclick="showBlock('contact')">HIRE ME</button>
+                </div>
+                    <br>
+                    <br>
+                    <br>
+                <div id="contact">
+                    <h1 align="center">CONTACT</h1>   
+                    
+                        <h3>GMAIL:</h3>
+                    <h3>  <a href="mailto:mrishik777@123" style="color:#800000">mrishik777@gmail.com</a></h3>
+                            <h3>PHONE NUMBER:</h3>
+                            <h3 style="color:#800000">9492302077</h3><br>
+                            <h3>GITHUB:</h3>
+                            <h3><a href="https://github.com/rishikmushke" style="color:#800000">mushkerishik</a></h3>
+                            <h3>LINKEDIN:</h3>
+                            <h3><a href="https://www.linkedin.com/in/mushke-rishik-521206383?utm_source=share_via&utm_content=profile&utm_medium=member_android" style="color:#800000">LINKEDIN</a></h3><br>
+                       
+                </div>
+                    <footer align="center" width=25px height=30px >
+    <p font-weight=20px>
+        © 2026 Mushke Rishik. All Rights Reserved.
+    </p>
+</footer>
+    </head>
+ </div>
+    <script>
+       
+function showBlock(id)
+{
+    let sections = [
+        "projects",
+        "resume",
+        "contact",
+    
+    ];
+
+    sections.forEach(function(section)
+    {
+        document.getElementById(section).style.display = "block";
+    });
+
+    document.getElementById(id).style.display = "block";
+
+    document.getElementById(id).scrollIntoView({
+        behavior: "smooth"
+    });
+}
+</script>
+</body>
+</html>
       

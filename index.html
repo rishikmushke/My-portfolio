@@ -3,123 +3,712 @@
 <body width=297px height=210px>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-    body{
-        background-color:#FFFFFF;
-    }
-    h1{
-        color:#74C365;
-        font-weight:strong;
-    }
-    button
-    {
-        background-color:#74C365;
-        text-size:200px;
-        font-weight:bold;
-        border:0px;
-        padding:20px 20px;
-        border-radius:200px;
-    }
-    dl
-    {
-        color:black;
-        text-font:verdana;
-        text-weight:italic;
-        text-height:30px;
-    }
-    ol
-    {
-        color:black;
-        text-weight:bold;
-    }
-    a
-    {
-        color:black;
-        text-size:20px;
-    }
-    dt
-    {
-        color:black;
-        font-size:25px;
-        font-weight:strong;
-    }
-    dd
-    {
-        color:black;
-        font-size:25px;
-        font-weight:strong;
-    }
-    a
-    {
-        align:"center"
-    }
-   div.educations,div.college,div.branch,div.intrest,div.careerobjective,c,java,python,html
-    {
-       border:300px;
-        padding:30px 30px;
-        background-color:white;
-        border-radius:300px;
-       
-    }
-    * {
+    
+/* ==========================================
+   RISHIK PORTFOLIO - LIQUID GLASS DESIGN
+   WHITE + LIGHT GREEN + TRANSPARENT GLASS
+========================================== */
+
+:root {
+    --green: #90ee90;
+    --green-dark: #32834a;
+    --mint: #d8fbe0;
+    --white: #ffffff;
+    --text: #183522;
+    --muted: #526c59;
+    --glass: rgba(255, 255, 255, 0.20);
+    --glass-border: rgba(255, 255, 255, 0.75);
+}
+
+/* GLOBAL */
+
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
-    margin: 0;
-    width: 100%;
-    min-width: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: var(--text);
+    line-height: 1.7;
+    padding: 25px;
+    overflow-x: hidden;
+
+    background:
+        radial-gradient(ellipse at 10% 10%,
+            rgba(144,238,144,0.65), transparent 35%),
+        radial-gradient(ellipse at 90% 30%,
+            rgba(190,250,200,0.75), transparent 35%),
+        radial-gradient(ellipse at 40% 90%,
+            rgba(210,255,220,0.8), transparent 40%),
+        linear-gradient(135deg, #ffffff, #e4f9e9);
+
+    background-attachment: fixed;
 }
-body
-    {
-    margin: 0;
-    width: 100%;
-    min-width: 0;
+
+/* FLOATING BACKGROUND LIGHT */
+
+body::before,
+body::after {
+    content: "";
+    position: fixed;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    filter: blur(75px);
+    opacity: 0.35;
+    pointer-events: none;
+    z-index: -1;
 }
-    @media (max-width: 600px) {
+
+body::before {
+    background: #90ee90;
+    top: 15%;
+    left: -150px;
+}
+
+body::after {
+    background: #b9f6c5;
+    bottom: 5%;
+    right: -150px;
+}
+
+/* MAIN NAME */
+
+body > h1 {
+    color: var(--marron) !important;
+    font-size: 32px;
+    padding: 20px 5%;
+    letter-spacing: 1px;
+    border-bottom: 1px solid rgba(50,131,74,0.2);
+}
+
+/* ==========================================
+   LIQUID GLASS SECTIONS
+========================================== */
+
+#intro,
+#home,
+.aboutme,
+.skills,
+.education,
+.projects,
+#resume,
+#contact {
+
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 42px;
+
+    position: relative;
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,0.55),
+            rgba(255,255,255,0.16)
+        );
+
+    backdrop-filter: blur(30px) saturate(180%);
+    -webkit-backdrop-filter: blur(30px) saturate(180%);
+
+    border: 1px solid rgba(255,255,255,0.85);
+    border-radius: 26px;
+
+    box-shadow:
+        0 15px 45px rgba(45,110,60,0.10),
+        inset 0 1px 2px rgba(255,255,255,0.95),
+        inset 0 -1px 1px rgba(144,238,144,0.25);
+
+    transition: all 0.4s ease;
+}
+
+/* GLASS REFLECTION */
+
+#intro::before,
+#home::before,
+.aboutme::before,
+.skills::before,
+.education::before,
+.projects::before,
+#resume::before,
+#contact::before {
+
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: linear-gradient(
+        125deg,
+        rgba(255,255,255,0.55),
+        transparent 35%,
+        transparent 70%,
+        rgba(255,255,255,0.15)
+    );
+
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* KEEP CONTENT ABOVE REFLECTION */
+
+#intro > *,
+#home > *,
+.aboutme > *,
+.skills > *,
+.education > *,
+.projects > *,
+#resume > *,
+#contact > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* GLASS HOVER */
+
+#intro:hover,
+#home:hover,
+.aboutme:hover,
+.skills:hover,
+.education:hover,
+.projects:hover,
+#resume:hover,
+#contact:hover {
+
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 22px 55px rgba(45,110,60,0.16),
+        inset 0 1px 3px white;
+}
+
+/* ==========================================
+   TYPOGRAPHY
+========================================== */
+
+h1 {
+    color: var(--green-dark);
+    font-size: 30px;
+    margin-bottom: 18px;
+}
+
+h2 {
+    color: var(--green-dark) !important;
+    font-size: 21px;
+    margin-top: 15px;
+}
+
+h3 {
+    color: var(--text) !important;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+h4 {
+    color: var(--muted) !important;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+/* ==========================================
+   HERO SECTION
+========================================== */
+
+#intro {
+    min-height: 390px;
+    padding: 55px;
+}
+
+#intro h3 {
+    color: var(--green-dark) !important;
+    letter-spacing: 2px;
+}
+
+#intro h1 {
+    color: #183522 !important;
+    font-size: clamp(32px, 5vw, 54px);
+    line-height: 1.2;
+    margin: 20px 0 25px;
+}
+
+#intro img {
+    width: 230px;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 25px;
+    border: 3px solid rgba(255,255,255,0.95);
+
+    box-shadow:
+        0 10px 30px rgba(57,139,80,0.18),
+        0 0 0 4px rgba(144,238,144,0.45);
+
+    margin-left: 30px;
+}
+
+/* ==========================================
+   LIQUID GLASS BUTTONS
+========================================== */
+
+button {
+    background: linear-gradient(
+        135deg,
+        rgba(144,238,144,0.75),
+        rgba(255,255,255,0.55)
+    );
+
+    color: #183522;
+
+    border: 1px solid rgba(255,255,255,0.9);
+    border-radius: 14px;
+
+    padding: 13px 24px;
+    margin: 7px 8px 7px 0;
+
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+
+    cursor: pointer;
+
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    box-shadow:
+        0 6px 18px rgba(57,139,80,0.12),
+        inset 0 1px 2px white;
+
+    transition: all 0.35s ease;
+}
+
+button:hover {
+    transform: translateY(-5px) scale(1.03);
+
+    background: rgba(255,255,255,0.85);
+
+    border-color: var(--green-dark);
+
+    box-shadow:
+        0 12px 25px rgba(57,139,80,0.2),
+        inset 0 1px 3px white;
+}
+
+/* ==========================================
+   PERSONAL DETAILS
+========================================== */
+
+#home {
+    text-align: left;
+}
+
+#home > h1 {
+    text-align: center;
+}
+
+.photo {
+    margin: 25px 0;
+}
+
+.photo img {
+    width: 230px;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 50%;
+
+    border: 5px solid rgba(255,255,255,0.9);
+
+    box-shadow:
+        0 0 0 5px rgba(144,238,144,0.55),
+        0 10px 30px rgba(57,139,80,0.15);
+}
+
+/* ==========================================
+   ABOUT ME
+========================================== */
+
+.aboutme > h1,
+.skills > h1,
+.education > h1,
+.projects > h1,
+#resume > h1,
+#contact > h1 {
+
+    text-align: center;
+    padding-bottom: 15px;
+
+    border-bottom: 2px solid rgba(144,238,144,0.85);
+}
+
+/* INNER GLASS CARDS */
+
+#education,
+.college,
+.branch,
+.intrest,
+.careerobjective {
+
+    background: rgba(255,255,255,0.28);
+
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    padding: 22px;
+    margin: 18px 0;
+
+    border-radius: 18px;
+    border: 1px solid rgba(255,255,255,0.85);
+
+    border-left: 4px solid var(--green);
+
+    min-height: 120px;
+    overflow: hidden;
+
+    box-shadow:
+        0 8px 25px rgba(57,139,80,0.07),
+        inset 0 1px 2px white;
+
+    transition: all 0.35s ease;
+}
+
+#education:hover,
+.college:hover,
+.branch:hover,
+.intrest:hover,
+.careerobjective:hover {
+
+    transform: translateY(-5px);
+
+    background: rgba(255,255,255,0.55);
+
+    box-shadow:
+        0 12px 30px rgba(57,139,80,0.13);
+}
+
+#education img,
+.college img,
+.branch img,
+.intrest img,
+.careerobjective img {
+
+    width: 100px;
+    height: 80px;
+
+    object-fit: cover;
+    border-radius: 13px;
+
+    border: 2px solid white;
+    margin-left: 15px;
+}
+
+/* ==========================================
+   SKILLS
+========================================== */
+
+#c,
+#python,
+#java,
+#html {
+
+    background: rgba(255,255,255,0.30);
+
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    padding: 18px 25px;
+    margin: 15px 0;
+
+    border-radius: 18px;
+    border: 1px solid rgba(255,255,255,0.9);
+
+    min-height: 110px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    box-shadow:
+        0 8px 25px rgba(57,139,80,0.08),
+        inset 0 1px 2px white;
+
+    transition: all 0.35s ease;
+}
+
+#c:hover,
+#python:hover,
+#java:hover,
+#html:hover {
+
+    transform: translateY(-6px) scale(1.01);
+
+    background: rgba(255,255,255,0.65);
+
+    border-color: var(--green);
+
+    box-shadow: 0 15px 30px rgba(57,139,80,0.15);
+}
+
+#c img,
+#python img,
+#java img,
+#html img {
+
+    width: 75px;
+    height: 75px;
+
+    object-fit: contain;
+    border-radius: 12px;
+}
+
+#c h1,
+#java h1 {
+    color: var(--green-dark) !important;
+}
+
+#python h1,
+#html h1 {
+    color: var(--text) !important;
+}
+
+/* ==========================================
+   EDUCATION
+========================================== */
+
+.education {
+    text-align: center;
+}
+
+.education h1,
+.education h2 {
+    margin: 15px 0;
+}
+
+.education h1[style*="green"] {
+    color: var(--green-dark) !important;
+    font-size: 32px;
+}
+
+/* ==========================================
+   PROJECTS
+========================================== */
+
+.projects h3 {
+    color: var(--green-dark) !important;
+    margin-top: 25px;
+    font-size: 19px;
+}
+
+.projects h4 {
+    line-height: 1.9;
+    margin: 10px 0;
+}
+
+/* LINKS */
+
+a {
+    color: var(--green-dark) !important;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+a:hover {
+    color: #183522 !important;
+    text-decoration: underline;
+}
+
+/* ==========================================
+   RESUME
+========================================== */
+
+#resume {
+    text-align: center;
+}
+
+#resume img {
+    width: 210px;
+    height: 297px;
+    object-fit: contain;
+
+    border: 3px solid rgba(255,255,255,0.95);
+    border-radius: 12px;
+
+    box-shadow:
+        0 8px 25px rgba(57,139,80,0.15),
+        0 0 0 3px rgba(144,238,144,0.4);
+
+    transition: 0.35s ease;
+}
+
+#resume img:hover {
+    transform: scale(1.05);
+}
+
+/* ==========================================
+   CONTACT
+========================================== */
+
+#contact {
+    text-align: center;
+}
+
+#contact h3 {
+    margin-top: 15px;
+}
+
+#contact a {
+    display: inline-block;
+
+    padding: 8px 18px;
+
+    background: rgba(144,238,144,0.25);
+
+    border: 1px solid rgba(255,255,255,0.8);
+    border-radius: 12px;
+
+    backdrop-filter: blur(12px);
+}
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+footer {
+    max-width: 1100px;
+    margin: 30px auto 0;
+    padding: 25px;
+
+    color: var(--green-dark);
+
+    border-top: 1px solid rgba(57,139,80,0.3);
+
+    text-align: center;
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN
+========================================== */
+
+@media (max-width: 768px) {
 
     body {
-        width: 100%;
-        font-size: 18px;
-    }
-}<div width=30px height=40px>
-    /* Responsive Design */
-
-@media (max-width: 600px) {
-    body {
-        width: 100%;
-        margin: 0;
+        padding: 10px;
     }
 
-    .container {
-        width: 100%;
+    body > h1 {
+        font-size: 45px;
+        padding: 15px;
     }
 
-    img {
-        max-width: 100%;
-        height: auto;
+    #intro,
+    #home,
+    .aboutme,
+    .skills,
+    .education,
+    .projects,
+    #resume,
+    #contact {
+
+        padding: 22px 16px;
+        margin: 20px auto;
+        border-radius: 18px;
     }
 
-    button {
-        font-size: 14px;
-        padding: 8px 12px;
+    #intro {
+        text-align: center;
+    }
+
+    #intro img {
+        float: none !important;
+        display: block;
+
+        width: 170px;
+        height: 190px;
+
+        margin: 0 auto 25px;
+    }
+
+    #intro h1 {
+        font-size: 30px;
+    }
+
+    .photo img {
+        width: 190px;
+        height: 190px;
+    }
+
+    #education img,
+    .college img,
+    .branch img,
+    .intrest img,
+    .careerobjective img {
+
+        width: 65px;
+        height: 60px;
     }
 
     h1 {
-        font-size: 208px;
+        font-size: 25px;
     }
 
-    p {
-        font-size: 2000px;
+    h2 {
+        font-size: 19px;
     }
-    home{
-        padding:20px;
-        border-radius:30px;
+
+    h3 {
+        font-size: 15px;
     }
-    
+
+    h4 {
+        font-size: 14px;
+    }
+
+    button {
+        padding: 11px 14px;
+        font-size: 11px;
+    }
+
+    #c img,
+    #python img,
+    #java img,
+    #html img {
+
+        width: 55px;
+        height: 55px;
+    }
 }
+
+@media (max-width: 380px) {
+
+    #intro h1 {
+        font-size: 25px;
+    }
+
+    button {
+        padding: 10px;
+        font-size: 10px;
+    }
+}
+
+/* REDUCE ANIMATION FOR ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
     </style>
     <head>
-        <h1 style="color:#800000" align="left">Mushke Rishik</h1>
+        <h1 style="color:white" align="left">Mushke Rishik</h1>
         <div id="intro" class="intro" >
             <img src="you1.jpg" align="right" width="200px" height="150px">
             <h3 style="color:black">Hello I'M Rishik</h3>
@@ -231,55 +820,4 @@ body
                 </div>
                 <div id="resume">
                     <h1 align="center">RESUME</h1><br>
-                    <img src="resume.jpg" width=210px height=297px align="center" ><br><br>
-                    <a href="mushke_rishik_resume.pdf" style="color:green">VIEW/DOWNLOAD</a><br><br>
-                    <button onclick="showBlock('contact')">HIRE ME</button>
-                </div>
-                    <br>
-                    <br>
-                    <br>
-                <div id="contact">
-                    <h1 align="center">CONTACT</h1>   
-                    
-                        <h3>GMAIL:</h3>
-                    <h3>  <a href="mailto:mrishik777@123" style="color:#800000">mrishik777@gmail.com</a></h3>
-                            <h3>PHONE NUMBER:</h3>
-                            <h3 style="color:#800000">9492302077</h3><br>
-                            <h3>GITHUB:</h3>
-                            <h3><a href="https://github.com/rishikmushke" style="color:#800000">mushkerishik</a></h3>
-                            <h3>LINKEDIN:</h3>
-                            <h3><a href="https://www.linkedin.com/in/mushke-rishik-521206383?utm_source=share_via&utm_content=profile&utm_medium=member_android" style="color:#800000">LINKEDIN</a></h3><br>
-                       
-                </div>
-                    <footer align="center" width=25px height=30px >
-    <p font-weight=20px>
-        © 2026 Mushke Rishik. All Rights Reserved.
-    </p>
-</footer>
-    </head>
- </div>
-    <script>
-       
-function showBlock(id)
-{
-    let sections = [
-        "projects",
-        "resume",
-        "contact",
-    
-    ];
-
-    sections.forEach(function(section)
-    {
-        document.getElementById(section).style.display = "block";
-    });
-
-    document.getElementById(id).style.display = "block";
-
-    document.getElementById(id).scrollIntoView({
-        behavior: "smooth"
-    });
-}
-</script>
-</body>
-</html>
+      
